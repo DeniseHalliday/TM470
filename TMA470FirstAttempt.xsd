@@ -12,18 +12,18 @@
 		
 		    <element name="HomeTelephoneNumber" type="tns:TelephoneNumber"></element>
 		    <element name="Email" type="tns:Email"></element>
-		    <element name="HomeCleaning" type="tns:HourlyService"></element>
-		    
-		    <element name="HomeChecks" type="tns:DailyService"></element>
-		    <element name="KeyHolderForEmergencies" type="tns:DailyService"></element>
+            <element name="HomeCleaning" type="tns:HourlyService"></element>
+            
 		    <element name="Landscaping" type="tns:HourlyService"></element>
-		
 		    <element name="PetSitting" type="tns:HourlyService"></element>
 		    <element name="GroceryShopping" type="tns:HourlyService"></element>
+		    
 		    <element name="GiftShopping" type="tns:HourlyService"></element>
-		
 		    <element name="DryCleaning" type="tns:HourlyService"></element>
-		    <element name="OverseeingContractorWorks" type="tns:DailyService"></element>
+            <element name="KeyHolderForEmergencies" type="tns:DailyService"></element>
+            
+            <element name="HomeChecks" type="tns:DailyService"></element>
+            <element name="OverseeingContractorWorks" type="tns:DailyService"></element>
 		    <element name="SourcingPlumbersElectriciansEtc" type="tns:DailyService"></element>
 		
 		    <element name="SourcingDecorators" type="tns:DailyService"></element>
@@ -96,7 +96,6 @@
     <complexType name="HourlyService">
     	<sequence>
     		<element name="Select" type="boolean" default="false"></element>
-    		<element name="Day" type="tns:MonToSat"></element>
     		<element name="Date" type="date"></element>
     		<element name="Hours" default="2">
     			<simpleType>
@@ -111,14 +110,6 @@
     				<restriction base="time">
     					<minInclusive value="08:00:00"></minInclusive>
     					<maxInclusive value="16:00:00"></maxInclusive>
-    				</restriction>
-    			</simpleType>
-    		</element>
-    		<element name="EndTime" default="10:00:00">
-    			<simpleType>
-    				<restriction base="time">
-    					<minInclusive value="10:00:00"></minInclusive>
-    					<maxInclusive value="18:00:00"></maxInclusive>
     				</restriction>
     			</simpleType>
     		</element>

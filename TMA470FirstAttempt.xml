@@ -1,31 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tns:HomeConciergeManagementRequestForm xmlns:tns="http:/t320.open.ac.uk/Schema/TM470FirstAttempt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http:/t320.open.ac.uk/Schema/TM470FirstAttempt TMA470FirstAttempt.xsd ">
   <tns:Name>
-    <tns:FirstName>Denise</tns:FirstName>
+    <tns:FirstName>tns:FirstName</tns:FirstName>
     <tns:LastName>tns:LastName</tns:LastName>
   </tns:Name>
   <tns:Address>
-    <tns:AddressLine1>20 St Brydes Way</tns:AddressLine1>
-    <tns:AddressLine2>Cardrona Village</tns:AddressLine2>
-    <tns:AddressLine3>Peebles</tns:AddressLine3>
-    <tns:AddressLine4></tns:AddressLine4>
-    <tns:PostCode>EN45 9LL</tns:PostCode>
+    <tns:AddressLine1>tns:AddressLine1</tns:AddressLine1>
+    <tns:AddressLine2>tns:AddressLine2</tns:AddressLine2>
+    <tns:AddressLine3>tns:AddressLine3</tns:AddressLine3>
+    <tns:AddressLine4>tns:AddressLine4</tns:AddressLine4>
+    <tns:PostCode>tns:PostCode</tns:PostCode>
   </tns:Address>
-  <tns:MobileNumber>07749641581</tns:MobileNumber>
-  <tns:HomeTelephoneNumber>01896831876</tns:HomeTelephoneNumber>
-  <tns:Email>denisehalliday@yahoo.co.uk</tns:Email>
+  <tns:MobileNumber>tns:MobileNumber</tns:MobileNumber>
+  <tns:HomeTelephoneNumber>tns:HomeTelephoneNumber</tns:HomeTelephoneNumber>
+  <tns:Email>tns:Email</tns:Email>
   <tns:HomeCleaning>
-    <tns:Select>true</tns:Select>
-    <tns:Day>Mon</tns:Day>
-    <tns:Date>20015-07-13</tns:Date>
+    <tns:Select>false</tns:Select>
+    <tns:Date>2001-01-01</tns:Date>
     <tns:Hours>2</tns:Hours>
     <tns:StartTime>08:00:00</tns:StartTime>
-    <tns:EndTime>10:00:00</tns:EndTime>
   </tns:HomeCleaning>
   <tns:HomeChecks>
-    <tns:Select>true</tns:Select>
-    <tns:Date>2015-07-15</tns:Date>
-    <tns:Days>14</tns:Days>
+    <tns:Select>false</tns:Select>
+    <tns:Date>2001-01-01</tns:Date>
+    <tns:Days>0</tns:Days>
     <tns:StartTime>12:00:00</tns:StartTime>
   </tns:HomeChecks>
   <tns:KeyHolderForEmergencies>
@@ -36,43 +34,33 @@
   </tns:KeyHolderForEmergencies>
   <tns:Landscaping>
     <tns:Select>false</tns:Select>
-    <tns:Day>Mon</tns:Day>
     <tns:Date>2001-01-01</tns:Date>
     <tns:Hours>2</tns:Hours>
     <tns:StartTime>08:00:00</tns:StartTime>
-    <tns:EndTime>10:00:00</tns:EndTime>
   </tns:Landscaping>
   <tns:PetSitting>
-    <tns:Select>true</tns:Select>
-    <tns:Day>Fri</tns:Day>
-    <tns:Date>2015-07-17</tns:Date>
+    <tns:Select>false</tns:Select>
+    <tns:Date>2001-01-01</tns:Date>
     <tns:Hours>2</tns:Hours>
-    <tns:StartTime>16:00:00</tns:StartTime>
-    <tns:EndTime>18:00:00</tns:EndTime>
+    <tns:StartTime>08:00:00</tns:StartTime>
   </tns:PetSitting>
   <tns:GroceryShopping>
     <tns:Select>false</tns:Select>
-    <tns:Day>Mon</tns:Day>
     <tns:Date>2001-01-01</tns:Date>
     <tns:Hours>2</tns:Hours>
     <tns:StartTime>08:00:00</tns:StartTime>
-    <tns:EndTime>10:00:00</tns:EndTime>
   </tns:GroceryShopping>
   <tns:GiftShopping>
     <tns:Select>false</tns:Select>
-    <tns:Day>Mon</tns:Day>
     <tns:Date>2001-01-01</tns:Date>
     <tns:Hours>2</tns:Hours>
     <tns:StartTime>08:00:00</tns:StartTime>
-    <tns:EndTime>10:00:00</tns:EndTime>
   </tns:GiftShopping>
   <tns:DryCleaning>
     <tns:Select>false</tns:Select>
-    <tns:Day>Mon</tns:Day>
     <tns:Date>2001-01-01</tns:Date>
     <tns:Hours>2</tns:Hours>
     <tns:StartTime>08:00:00</tns:StartTime>
-    <tns:EndTime>10:00:00</tns:EndTime>
   </tns:DryCleaning>
   <tns:OverseeingContractorWorks>
     <tns:Select>false</tns:Select>
