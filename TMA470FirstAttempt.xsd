@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http:/t320.open.ac.uk/Schema/TM470FirstAttempt" xmlns:tns="http:/t320.open.ac.uk/Schema/TM470FirstAttempt" elementFormDefault="qualified">
+
+	<element name="HomeConciergeManagementRequestForm" type="tns:HomeConciergeManagementRequestForm" />
+
+
+	<complexType name="HomeConciergeManagementRequestForm">
+		<sequence>
+			<element name="Name" type="tns:Name"></element>
+			<element name="Address" type="tns:Address"></element>
+		    <element name="MobileNumber" type="tns:TelephoneNumber"></element>
+		
+		    <element name="HomeTelephoneNumber" type="tns:TelephoneNumber"></element>
+		    <element name="Email" type="tns:Email"></element>
+		    <element name="HomeCleaning" type="tns:HourlyService"></element>
+		    
+		    <element name="HomeChecks" type="tns:DailyService"></element>
+		    <element name="KeyHolderForEmergencies" type="tns:DailyService"></element>
+		    <element name="Landscaping" type="tns:HourlyService"></element>
+		
+		    <element name="PetSitting" type="tns:HourlyService"></element>
+		    <element name="GroceryShopping" type="tns:HourlyService"></element>
+		    <element name="GiftShopping" type="tns:HourlyService"></element>
+		
+		    <element name="DryCleaning" type="tns:HourlyService"></element>
+		    <element name="OverseeingContractorWorks" type="tns:DailyService"></element>
+		    <element name="SourcingPlumbersElectriciansEtc" type="tns:DailyService"></element>
+		
+		    <element name="SourcingDecorators" type="tns:DailyService"></element>
+		    <element name="RunMiscellaneousErrands" type="tns:DailyService"></element>
+		    <element name="PartyPlanning" type="tns:DailyService"></element>
+		
+		    <element name="MakingTravelArrangements" type="tns:DailyService"></element>
+		    <element name="BookingDinnerReservations" type="tns:DailyService"></element>
+		    <element name="BookingTheatresOrEvents" type="tns:DailyService"></element>
+		
+		    <element name="AditionalInformation">
+		    	<simpleType>
+		    		<restriction base="string">
+		    			<maxLength value="500"></maxLength>
+		    		</restriction>
+		    	</simpleType>
+		    </element>
+		</sequence>
+	</complexType>
+
+    <complexType name="Address">
+    	<sequence>
+    		<element name="AddressLine1" type="string"></element>
+    		<element name="AddressLine2" type="string"></element>
+    		<element name="AddressLine3" type="string"></element>
+    		<element name="AddressLine4" type="string"></element>
+    		<element name="PostCode" type="tns:PostCode"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="Name">
+    	<sequence>
+    		<element name="FirstName" type="string"></element>
+    		<element name="LastName" type="string"></element>
+    	</sequence>
+    </complexType>
+    
+    <simpleType name="PostCode">
+    	<restriction base="string">
+    		<pattern
+    			value="(GIR 0AA)|((([A-Z-[QVX]][0-9][0-9]?)|(([A-Z-[QVX]][A-Z-[IJZ]][0-9][0-9]?)|(([A-Z-[QVX]][0-9][A-HJKPSTUW])|([A-Z-[QVX]][A-Z-[IJZ]][0-9][ABEHMNPRVWXY])))) [0-9][A-Z-[CIKMOV]]{2})">
+    		</pattern>
+    	</restriction>
+    </simpleType>
+    
+    <simpleType name="TelephoneNumber">
+    	<restriction base="string">
+    		<pattern value="\d\d\d\d\d\d\d\d\d\d\d"></pattern>
+    	</restriction>
+    </simpleType>
+    
+    <simpleType name="Email">
+    	<restriction base="string">
+    		<pattern
+    			value="[^@]+@[^\.]+\..+">
+    		</pattern>
+    	</restriction>
+    </simpleType>
+
+    <complexType name="DailyService">
+    	<sequence>
+    		<element name="Select" type="boolean" default="false"></element>
+    		<element name="Date" type="date"></element>
+    		<element name="Days" type="int">
+    		</element>
+    		<element name="StartTime" type="time"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="HourlyService">
+    	<sequence>
+    		<element name="Select" type="boolean" default="false"></element>
+    		<element name="Day" type="tns:MonToSat"></element>
+    		<element name="Date" type="date"></element>
+    		<element name="Hours" default="2">
+    			<simpleType>
+    				<restriction base="int">
+    					<minInclusive value="2"></minInclusive>
+    					<maxInclusive value="8"></maxInclusive>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    		<element name="StartTime" default="08:00:00">
+    			<simpleType>
+    				<restriction base="time">
+    					<minInclusive value="08:00:00"></minInclusive>
+    					<maxInclusive value="16:00:00"></maxInclusive>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    		<element name="EndTime" default="10:00:00">
+    			<simpleType>
+    				<restriction base="time">
+    					<minInclusive value="10:00:00"></minInclusive>
+    					<maxInclusive value="18:00:00"></maxInclusive>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    	</sequence>
+    </complexType>
+    
+    <simpleType name="MonToSat">
+    	<restriction base="string">
+    		<enumeration value="Mon"></enumeration>
+    		<enumeration value="Tue"></enumeration>
+    		<enumeration value="Wed"></enumeration>
+    		<enumeration value="Thu"></enumeration>
+    		<enumeration value="Fri"></enumeration>
+    		<enumeration value="Sat"></enumeration>
+    	</restriction>
+    </simpleType>
+
+    <simpleType name="MonToSun">
+    	<restriction base="string">
+    		<enumeration value="Mon"></enumeration>
+    		<enumeration value="Tue"></enumeration>
+    		<enumeration value="Wed"></enumeration>
+    		<enumeration value="Thu"></enumeration>
+    		<enumeration value="Fri"></enumeration>
+    		<enumeration value="Sat"></enumeration>
+    		<enumeration value="Sun"></enumeration>
+    	</restriction>
+    </simpleType>
+
+</schema>
