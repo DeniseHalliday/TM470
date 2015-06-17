@@ -15,7 +15,7 @@
   <tns:HomeTelephoneNumber>01896831876</tns:HomeTelephoneNumber>
   <tns:Email>denisehalliday@yahoo.co.uk</tns:Email>
   <tns:HomeCleaning>
-    <tns:Select>false</tns:Select>
+    <tns:Select>true</tns:Select>
     <tns:Day>Mon</tns:Day>
     <tns:Date>2015-07-13</tns:Date>
     <tns:Days>0</tns:Days>
